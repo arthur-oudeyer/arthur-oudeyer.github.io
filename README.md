@@ -1,7 +1,3 @@
----
-layout: default
----
-
 ## About Me
 
 My name is **Arthur Oudeyer** — I am passionate about science, with a particular interest in **aerospace**, **computer science**, and understanding **physical and biological phenomena**. I am working towards scientific research or engineering on cutting-edge topics.
