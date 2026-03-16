@@ -10,21 +10,21 @@ title: Informatics Projects
 - **[Paper Airplane Trajectory Prediction](https://github.com/Arthur1459/trajectory-prediction-ai-vs-physics)** — Research project comparing physical models vs. AI (MLP) for predicting paper airplane trajectories, using visual computation to extract data from video. [(Report PDF)](https://github.com/Arthur1459/trajectory-prediction-ai-vs-physics/blob/master/Research%20Project%20Report%20-%20Paper%20Airplane%20Trajectory%20Prediction%20using%20AI%20and%20Physical%20Models%20-%20TIPE.pdf) [(Presentation PDF)](https://github.com/Arthur1459/trajectory-prediction-ai-vs-physics/blob/master/Presentation%20-%20Predicting%20Paper%20Airplane%20Trajectory%20using%20Physic%20and%20AI%20models%20-%20ENGLISH.pdf)
 - **[Hestia — Life Evolution Engine](https://github.com/Arthur1459/Hestia-LifeEngine)** — Simulates creatures with neural networks, mutations, and natural selection. [(Video)](https://www.youtube.com/watch?v=lEb7CYoWC1o)
 - **[Cellular Evolution](https://github.com/Arthur1459/Sandbox/tree/Cellular_Evolution/CellularEvolution)** — Game-of-Life variant with species and genetic evolution. [(Video)](https://youtu.be/scTMij-t5qM?si=oxr-8ZQLQCNFJy-W)
-- **[IA Walk & Learn](https://github.com/Arthur1459/Sandbox/tree/IA_WalkEvolution/IAwalkV1)** — A body learns to walk and evolve, powered by my *Flow* physics engine. [(Video)](https://youtu.be/ZsRW8K_1e3M?si=l0sip7GCNoOB2keD)
+- **[Walking - Machine Learning](https://github.com/Arthur1459/Sandbox/tree/IA_WalkEvolution/IAwalkV1)** — A body learns to walk and evolve, powered by my *Flow* physics engine. [(Video)](https://youtu.be/ZsRW8K_1e3M?si=l0sip7GCNoOB2keD)
 
 ### Physics Engines
 
-- **[Flow](https://github.com/Arthur1459/Sandbox/tree/2DPhysicEngine_Flow/Flow)** — Custom 2D particle-based physics engine. [(Video)](https://www.youtube.com/watch?v=sULbugrldyQ)
+- **[Flow](https://github.com/Arthur1459/Sandbox/tree/2DPhysicEngine_Flow/Flow)** — Custom 2D particle-based physics engine. It uses the Verlet Integration method to approximate Newton's laws. [(Video)](https://www.youtube.com/watch?v=sULbugrldyQ)
 - **[Gravity](https://github.com/Arthur1459/Sandbox/tree/Gravity/Gravity)** — Celestial body simulation.
+- **[Machines Simulator](https://github.com/arthur-oudeyer/CodeTheMachine)** — 2D drone/car simulation for educational activities related to automation. [(Video)](https://www.youtube.com/watch?v=q-aVFcZp5BU)
 
 ### Biology & Physics Simulations
 
 - **Particle Life** — Lagrangian approach to model agents interaction according to 2D crossing map of interaction description. Aims to simulate life behaviors. [(Video)](https://www.youtube.com/watch?v=pjEVLWgEcIU)
-- **Ants Simulation** [(Video)](https://youtu.be/hy7VarhVZ08?si=_Vn08h6n_Vnn-umb)
+- **Ants Simulation** - Ants pathfinding, food research, ants dynamics [(Video)](https://youtu.be/hy7VarhVZ08?si=_Vn08h6n_Vnn-umb)
 - **Underwater: Shoal of Fish** — Shoal dynamic. [(Video)](https://youtu.be/cxvNE3-Js0k)
 - **Map Generator** — Procedural map generation using a Constraint-Satisfaction Algorithm. [(Video)](https://youtu.be/9tTkk0wHrWs?si=V1EuOSLu_9yeD-8W)
 - **[Gas Simulator](https://github.com/Arthur1459/GazSimulator)** — Particle model with custom interactions depending on particle type.
-- **Drone Simulator** — 2D drone simulation for educational activities related to automation. [(Video)](https://www.youtube.com/watch?v=q-aVFcZp5BU) [(Code The Machine Repo)](https://github.com/arthur-oudeyer/CodeTheMachine)
 
 ### Games
 
