@@ -5,12 +5,12 @@ title: Educational Projects
 
 ## Educational Projects
 
-Sharing my passions is something i really like. Through tutorial, activities, animations and resources i tried to to get people interested in these amazing topics.
+Sharing my passions is something i really like. Through tutorials, activities, animations and resources i try to to get people interested in these amazing topics.
 
 ### Robotic
 
-- **mBot Activity** - for middle and high school student. This activity aims to make young student to discover robotics through simple activities around the robot "mBot" by coding with scratch-like language. It also aims to make them discovers basic part of robot (motors, sensors, ...). ([All docs & presentation](https://drive.google.com/drive/folders/1wp0GRc-DV3BbTebU-z4n_gw1j-LLA12X?usp=drive_link))
-- **Drone discovery** - programming, automation, technologies, it aims to make high school student to discover how drones works. It is composed of python drone simulator (see below *Machine Simulation*) with coding challenges, Presentation about drones technologies, real drone (Crazy Fly LiteWing) coding and testing ([Code Repo](https://github.com/arthur-oudeyer/LiteWing-Drone-Project)) ([All docs & presentation](https://drive.google.com/drive/folders/1QegzjL_7W-unbF-MQxy6okbT1ONbx3_A?usp=drive_link)).
+- **mBot Activity** - for middle and high school student. This activity aims to make young student to discover robotics through simple activities around the robot "mBot" by coding with scratch-like language. It also aims to make them discover ths basic parts of robots (motors, sensors, ...). ([All docs & presentation](https://drive.google.com/drive/folders/1wp0GRc-DV3BbTebU-z4n_gw1j-LLA12X?usp=drive_link)). (2025-2026)
+- **Drone discovery** - programming, automation, technologies, it aims to make high school student to discover how drones works. It is composed of python drone simulator (see below *Machine Simulation*) with coding challenges, Presentation about drones technologies, real drone (Crazy Fly LiteWing) coding and testing ([Code Repo](https://github.com/arthur-oudeyer/LiteWing-Drone-Project)) ([All docs & presentation](https://drive.google.com/drive/folders/1QegzjL_7W-unbF-MQxy6okbT1ONbx3_A?usp=drive_link)). (2025-2026)
 
 ### programming
 
