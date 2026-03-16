@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <style>
+      /* ── Header video background ─────────────────────── */
       .page-header {
         position: relative;
         overflow: hidden;
@@ -21,7 +22,6 @@
         z-index: 0;
       }
 
-      /* Dark overlay so the text stays readable */
       #video-bg::after {
         content: '';
         position: absolute;
@@ -30,15 +30,14 @@
         background: rgba(21, 87, 153, 0.3);
       }
 
-      /* Iframe always covers the header regardless of aspect ratio */
       #ytplayer {
         position: absolute;
         top: 50%;
         left: 50%;
         width: 100vw;
-        height: 56.25vw;   /* 16:9 from viewport width */
+        height: 56.25vw;
         min-height: 100%;
-        min-width: 177.78%; /* 16:9 from container height */
+        min-width: 177.78%;
         transform: translate(-50%, -50%);
         border: 0;
         pointer-events: none;
@@ -63,21 +62,68 @@
       }
 
       @media screen and (max-width: 42em) {
-        .profile-photo {
-          width: 70px;
-          height: 70px;
-          top: 1rem;
-          right: 1rem;
-        }
+        .profile-photo { width: 70px; height: 70px; top: 1rem; right: 1rem; }
       }
 
-      /* ── Main content improvements ───────────────────── */
+      /* ── Page wrapper (sidebar + content) ────────────── */
+      .page-wrapper {
+        display: flex;
+        max-width: 64rem;
+        margin: 0 auto;
+        padding: 2rem;
+        gap: 2.5rem;
+        align-items: flex-start;
+      }
+
+      /* ── Sidebar navigation ──────────────────────────── */
+      .site-nav {
+        flex: 0 0 160px;
+        position: sticky;
+        top: 1.5rem;
+      }
+
+      .site-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #e1e4e8;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+
+      .site-nav li + li { border-top: 1px solid #e1e4e8; }
+
+      .site-nav a {
+        display: block;
+        padding: 0.65rem 1rem;
+        color: #555;
+        text-decoration: none;
+        font-size: 0.87rem;
+        font-weight: 500;
+        transition: background 0.15s;
+      }
+
+      .site-nav a:hover { background: #f5f8fa; color: #155799; text-decoration: none; }
+
+      .site-nav a.active { background: #155799; color: #fff; font-weight: 600; }
+
+      /* ── Main content ────────────────────────────────── */
+      .main-content {
+        flex: 1;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        min-width: 0;
+      }
+
       .main-content h2 {
         margin-top: 2.5rem;
         padding-bottom: 0.4rem;
         border-bottom: 2px solid #159957;
         color: #155799;
       }
+
+      .main-content h2:first-child { margin-top: 0; }
 
       .main-content h3 {
         margin-top: 1.8rem;
@@ -89,16 +135,9 @@
         color: #666;
       }
 
-      .main-content ul > li {
-        margin-bottom: 0.55em;
-        line-height: 1.75;
-      }
+      .main-content ul > li { margin-bottom: 0.55em; line-height: 1.75; }
 
-      .main-content hr {
-        margin: 2.5rem 0;
-        border: none;
-        border-top: 1px solid #e1e4e8;
-      }
+      .main-content hr { margin: 2.5rem 0; border: none; border-top: 1px solid #e1e4e8; }
 
       .main-content p strong a {
         color: #155799;
@@ -109,13 +148,21 @@
 
       .main-content p strong a:hover { color: #159957; }
 
-      .main-content a[href^="mailto:"] {
-        font-size: 1.05em;
-        font-weight: 600;
-        color: #159957;
-      }
-
+      .main-content a[href^="mailto:"] { font-size: 1.05em; font-weight: 600; color: #159957; }
       .main-content a[href^="mailto:"]:hover { color: #155799; }
+
+      /* ── Mobile: nav becomes horizontal top bar ──────── */
+      @media screen and (max-width: 42em) {
+        .page-wrapper { flex-direction: column; padding: 1rem; gap: 1.5rem; }
+
+        .site-nav { flex: none; width: 100%; position: static; }
+
+        .site-nav ul { display: flex; flex-wrap: wrap; }
+
+        .site-nav li + li { border-top: none; border-left: 1px solid #e1e4e8; }
+
+        .site-nav a { padding: 0.5rem 0.75rem; font-size: 0.82rem; }
+      }
     </style>
   </head>
 
@@ -140,19 +187,32 @@
       </div>
     </header>
 
-    <main id="content" class="main-content" role="main">
-      {{ content }}
+    <div class="page-wrapper">
+      <nav class="site-nav">
+        <ul>
+          <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} class="active"{% endif %}>Presentation</a></li>
+          <li><a href="{{ '/informatics' | relative_url }}"{% if page.url contains 'informatics' %} class="active"{% endif %}>Informatics Projects</a></li>
+          <li><a href="{{ '/educational' | relative_url }}"{% if page.url contains 'educational' %} class="active"{% endif %}>Educational Projects</a></li>
+          <li><a href="{{ '/music' | relative_url }}"{% if page.url contains 'music' %} class="active"{% endif %}>Music</a></li>
+          <li><a href="{{ '/links' | relative_url }}"{% if page.url contains 'links' %} class="active"{% endif %}>Other Links</a></li>
+        </ul>
+      </nav>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
-      </footer>
-    </main>
+      <main id="content" class="main-content" role="main">
+        {{ content }}
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+      <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+    </footer>
 
     <script>
       const VIDEO_IDS = [
         'scTMij-t5qM', 'cxvNE3-Js0k', 'ZsRW8K_1e3M', 'sULbugrldyQ',
-        '9tTkk0wHrWs', 'lEb7CYoWC1o', 'hy7VarhVZ08', 'poq1JJ2aaF0', 'IdYiNkuHv3s'
+        '9tTkk0wHrWs', 'lEb7CYoWC1o', 'hy7VarhVZ08', 'poq1JJ2aaF0',
+        'IdYiNkuHv3s', 'maCxTkuBVxA', 'pjEVLWgEcIU'
       ];
 
       function shuffle(arr) {
@@ -171,15 +231,8 @@
         player = new YT.Player('ytplayer', {
           videoId: playlist[currentIndex],
           playerVars: {
-            autoplay: 1,
-            mute: 1,
-            controls: 0,
-            disablekb: 1,
-            fs: 0,
-            iv_load_policy: 3,
-            modestbranding: 1,
-            rel: 0,
-            playsinline: 1
+            autoplay: 1, mute: 1, controls: 0, disablekb: 1,
+            fs: 0, iv_load_policy: 3, modestbranding: 1, rel: 0, playsinline: 1
           },
           events: {
             onReady: function(e) { e.target.playVideo(); },
